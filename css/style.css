@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/*отступы*/
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*перещет области*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*отключение обводки*/
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+/*делаем блочными некоторые теги*/
+nav, footer, header, aside {
+  display: block;
+}
+
+/*Уравниваем поведение шрифтов и тд для разных браузеров (также запрещает самовольное увеличени шрифтов (айфон))*/
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*Говоорим тегам наследовать семейство шрифта*/
+input, button, textarea {
+  font-family: inherit;
+  display: block;
+}
+
+/*еще куча фич, таких как отклчение крестиков и отступов в разных браузерах*/
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*Обнуляем все заголовки*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  background: hsl(218deg, 23%, 16%);
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 35px;
+  color: hsl(193deg, 38%, 86%);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  align-items: center;
+}
+
+.advice {
+  position: relative;
+  margin: 0 16px;
+  border-radius: 13px;
+  background-color: hsl(217deg, 19%, 24%);
+  padding: 40px 24px;
+  text-align: center;
+}
+.advice__title {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: hsl(150deg, 100%, 66%);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+.advice__text {
+  text-align: center;
+}
+.advice hr {
+  margin-top: 32px;
+  margin-bottom: 30px;
+  position: relative;
+  background: url("../images/pattern-divider-desktop.svg") no-repeat top center;
+  background-size: contain;
+  display: block;
+  height: 16px;
+}
+.advice hr::after, .advice hr::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: hsl(193deg, 38%, 86%);
+  height: 1px;
+  top: 8px;
+}
+.advice hr::before {
+  left: 0;
+  right: 50%;
+  margin-right: 26px;
+}
+.advice hr::after {
+  right: 0;
+  left: 50%;
+  margin-left: 26px;
+}
+.advice__button {
+  transition: 0.3s;
+  transition-property: box-shadow;
+  position: absolute;
+  bottom: -32px;
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: hsl(150deg, 100%, 66%);
+}
+.advice__button:hover {
+  box-shadow: 0 0 30px 0 hsl(150deg, 100%, 66%);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  left: 16px;
+  line-height: 16px;
+  font-size: 14px;
+}
+.attribution a {
+  transition: 0.3s;
+  color: #818078;
+}
+.attribution a:hover {
+  color: hsl(150deg, 100%, 66%);
+}
+
+@media (min-width: 500px) {
+  body {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .advice {
+    width: 540px;
+    padding: 48px;
+  }
+  .advice hr {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    background: url("../images/pattern-divider-mobile.svg") no-repeat top center;
+  }
+}

@@ -1,0 +1,100 @@
+body {
+   background: $dark-blue;
+   font-family: 'Manrope', sans-serif;
+   font-weight: 800;
+   font-size: 24px;
+   line-height: 35px;
+   color: $light-cyan;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   position: relative;
+   height: 100%;
+   align-items: center;
+}
+
+.advice {
+   position: relative;
+   margin: 0 16px;
+   border-radius: 13px;
+   background-color: $dark-grayish-blue;
+   padding: 40px 24px;
+   text-align: center;
+
+   &__title {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $neon-green;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      text-align: center;
+   }
+
+   hr {
+      margin-top: 32px;
+      margin-bottom: 30px;
+      position: relative;
+
+      background: url('../images/pattern-divider-desktop.svg') no-repeat top center;
+      background-size: contain;
+      display: block;
+      height: 16px;
+      &::after, &::before {
+         content: '';
+         display: block;
+         position: absolute;
+         background-color: $light-cyan;
+         height: 1px;
+         top: 8px;
+      }
+      &::before {
+         left: 0;
+         right: 50%;
+         margin-right: 26px;
+      }
+      &::after {
+         right: 0;
+         left: 50%;
+         margin-left: 26px;
+      }
+   }
+
+   &__button {
+      transition: .3s;
+      transition-property: box-shadow;
+
+      position: absolute;
+      bottom: -32px;
+      left: calc(50% - 32px);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: $neon-green;
+
+      &:hover {
+         box-shadow: 0 0 30px 0 $neon-green;
+      }
+   }
+}
+
+.attribution {
+   position: absolute;
+   bottom: 16px;
+   right: 16px;
+   left: 16px;
+   line-height: 16px;
+   font-size: 14px;
+   a {
+      transition: .3s;
+      color: #818078;
+      &:hover {
+         color: $neon-green;
+      }
+   }
+}

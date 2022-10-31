@@ -1,0 +1,17 @@
+@media (min-width: 500px) {
+   body {
+      font-size: 28px;
+      line-height: 35px;
+   }
+   .advice {
+      width: 540px;
+      padding: 48px;
+
+      hr {
+         margin-top: 45px;
+         margin-bottom: 45px;
+
+      background: url('../images/pattern-divider-mobile.svg') no-repeat top center;
+      }
+   }
+}
